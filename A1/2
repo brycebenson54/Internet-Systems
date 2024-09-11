@@ -1,0 +1,23 @@
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+using namespace std;
+
+int main(){
+    int status;
+    char *cmd[10] = { (char *)"wc", (char *)"1.cpp"};
+    int pid1 = fork();
+
+    if (pid1 == 0){
+        cout << "\nI am the Child. pid = " << getpid() << endl; 
+        execvp(cmd[0], cmd);
+    }
+    else if (pid1 > 0){
+        cout << "\n I am the Parent. pid = " << getpid() << endl; 
+        waitpid (pid1, &status, 0); 
+    } 
+    return 0;
+}

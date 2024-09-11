@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title> Events</title>
+    <script>
+        function makeRed(){
+            this.style.color = "red"
+        }
+        function registerRed(){
+            let elt = document.getElementById("p")
+            elt.onclick = makeRed
+        }
+        function removeRed(){
+            let elt = document.getElementById("p")
+            elt.onclick = null;
+            elt.style.color = "black"
+        }
+    </script>
+    </head>
+<body>
+    <p onclick="registerRed()">Register Handler</p>
+    <p id = "p"> Click Me! </p>
+    <p onclick="removeRed()">Remove Handler</p>
+</body>
+</html>
+
+    

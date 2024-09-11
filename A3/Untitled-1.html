@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title> JQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function()){
+                $("#toggle").on("click",function(){
+                    $("showArea").toggle();
+                });
+                $("#toggle").on("click",function(){
+                    $("showArea").toggle();
+
+                });
+
+            }
+        </script>
+    </head>
+    <body>
+        <input id="show" type="button" value="Show Text"/>
+        <input id="hide" type="button" value="Hide Text"/>
+        <input id="toggle" type="button" value="Toggle Text"/>
+        <input id="fadeto" type="button" value="Fade"/>
+        <div id="showArea" style="display:none;">
+        </div>
+    </body>
+
+
+</html>
